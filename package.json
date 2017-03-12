@@ -1,0 +1,51 @@
+{
+  "name": "trip-anlyser",
+  "version": "1.0.0",
+  "description": "simple app",
+  "main": "index.js",
+  "scripts": {
+    "test": "karma start",
+    "start": "node server.js"
+  },
+  "author": "Me",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.15.3",
+    "chart.js": "^2.5.0",
+    "express": "^4.14.1",
+    "react": "^0.14.7",
+    "react-chartjs-2": "^2.0.5",
+    "react-dom": "^0.14.7",
+    "react-router": "^2.0.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.5.1",
+    "babel-loader": "^6.2.2",
+    "babel-preset-env": "^1.2.1",
+    "babel-preset-react": "^6.5.0",
+    "css-loader": "^0.23.1",
+    "expect": "^1.14.0",
+    "foundation-sites": "^6.2.0",
+    "jquery": "^2.2.1",
+    "karma": "^0.13.22",
+    "karma-chrome-launcher": "^0.2.2",
+    "karma-mocha": "^0.2.2",
+    "karma-mocha-reporter": "^2.0.0",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-webpack": "^1.7.0",
+    "mocha": "^2.4.5",
+    "node-sass": "^4.5.0",
+    "sass-loader": "^6.0.3",
+    "script-loader": "^0.6.1",
+    "style-loader": "^0.13.0",
+    "webpack": "^1.14.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trafficvision/trip-analyser.git"
+  },
+  "bugs": {
+    "url": "https://github.com/trafficvision/trip-analyser/issues"
+  },
+  "homepage": "https://github.com/trafficvision/trip-analyser#readme"
+}
