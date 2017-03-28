@@ -1,13 +1,13 @@
 const React = require('react');
 
-var User = React.createClass({
+var Map = React.createClass({
   render: function () {
     return (
       <div>
-        <h1>User Page</h1>
+        <h1>Map goes here</h1>
       </div>
     );
   }
 });
 
-module.exports = User;
+module.exports = Map;

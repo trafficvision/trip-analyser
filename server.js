@@ -15,7 +15,7 @@ const PORT = process.env.PORT || 3000;
 //   } else {
 //     next();
 //   }
-// 
+//
 // });
 
 // folder to serve

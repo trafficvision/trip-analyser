@@ -59,9 +59,15 @@ var Report = React.createClass({
 
     return (
       <div>
-        <h1 className="text-center page-title">Generate Report</h1>
-        <SearchForm onNewSearch={this.handleNewSearch}/>
-        {renderResult()}
+        <div className="row">
+          <div className="large-3 columns">
+            <h3 className="text-center page-title">Generate Report</h3>
+            <SearchForm onNewSearch={this.handleNewSearch}/>
+          </div>
+          <div className="large-8 large-offset-1 columns">
+            {renderResult()}
+          </div>
+        </div>
       </div>
     );
   }

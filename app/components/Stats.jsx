@@ -1,13 +1,13 @@
 const React = require('react');
 
-var User = React.createClass({
+var Stats = React.createClass({
   render: function () {
     return (
       <div>
-        <h1>User Page</h1>
+        <h1>Statistics go here</h1>
       </div>
     );
   }
 });
 
-module.exports = User;
+module.exports = Stats;

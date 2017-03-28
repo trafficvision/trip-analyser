@@ -1,11 +1,7 @@
 var React = require('react');
-var {Bar, Doughnut} = require('react-chartjs-2');
+var {Bar, Bubble, Doughnut, Line, Mix, Pie} = require('react-chartjs-2');
 
-var Chart = require('Chart');
-var Map = require('Map');
-var Stats = require('Stats');
-
-var SearchResult = React.createClass({
+var Chart = React.createClass({
   render: function () {
     const data = {
       labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
@@ -23,13 +19,10 @@ var SearchResult = React.createClass({
     };
     return (
       <div>
-        <h3 className="text-center">Result will go here!!!!</h3>
-        <Stats>What about this????</Stats>
-        <Chart />
-        <Map />
+        <Bar ref='chart' data={data} />
       </div>
     );
   },
 });
 
-module.exports = SearchResult;
+module.exports = Chart;

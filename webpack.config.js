@@ -1,4 +1,7 @@
 var webpack = require('webpack');
+var path = require('path');
+
+process.env.NODE_ENV = process.env.NODE_ENV || 'developement';
 
 module.exports = {
   entry: [
@@ -13,6 +16,11 @@ module.exports = {
     new webpack.ProvidePlugin({
       '$': 'jquery',
       'jQuery': 'jquery',
+    }),
+    new webpack.optimize.UglifyJsPlugin({
+      compressor: {
+        warnings: false
+      }
     })
   ],
   output: {
@@ -21,18 +29,13 @@ module.exports = {
   },
   resolve: {
     root: __dirname,
+    modulesDirectories: [
+      'node_modules',
+      './app/components',
+      './app/api',
+    ],
     alias: {
-      Main: 'app/components/Main.jsx',
-      Nav: 'app/components/Nav.jsx',
-      About: 'app/components/About.jsx',
-      firebaseAPI: 'app/api/firebaseAPI.jsx',
-      ErrorModal: 'app/components/ErrorModal.jsx',
       applicationStyles: 'app/styles/app.scss',
-      Documentation: 'app/components/Documentation.jsx',
-      Report: 'app/components/Report.jsx',
-      SearchForm: 'app/components/SearchForm.jsx',
-      SearchResult: 'app/components/SearchResult.jsx',
-      User: 'app/components/User.jsx',
     },
     extensions: ['', '.js', '.jsx']
   },
@@ -41,12 +44,17 @@ module.exports = {
       {
         loader: 'babel-loader',
         query: {
-          presets: ['react', 'env']
+          presets: ['react', 'env', 'stage-0']
         },
         test: /\.jsx?$/,
         exclude: /(node_modules|bower_components)/
       }
     ]
   },
-  devtool: 'cheap-module-eval-source-map',
+  sassLoader: {
+    includePaths: [
+      path.resolve(__dirname, './node_modules/foundation-sites/scss')
+    ]
+  },
+  devtool: process.env.NODE_ENV === 'production' ? undefined : 'cheap-module-eval-source-map',
 };
