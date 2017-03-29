@@ -1,5 +1,13 @@
 @import "base/variables";
 @import "components/navigation";
+// Foundation
+@import "base/foundation-settings";
+// @import '../../node_modules/foundation-sites/scss/settings/settings';
+@import "../../node_modules/foundation-sites/scss/foundation";
+@include foundation-everything;
+
+// Components
+
 
 // $space-large: 2.5rem;
 // $title-color: #555;
